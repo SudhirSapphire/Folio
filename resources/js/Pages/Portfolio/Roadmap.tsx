@@ -15,16 +15,24 @@ interface RoadmapMilestone {
 }
 
 const Roadmap = ({ roadmaps }: { roadmaps: RoadmapMilestone[] }) => {
-  // Sort roadmaps by phase weight: Now (1), Next (2), Future (3) then by order_weight
+  // Sort roadmaps by phase weight: Past (1), Now (2), Next (3), Future (4) then by order_weight
   const sortedRoadmaps = [...roadmaps].sort((a, b) => {
-    const phaseWeights = { Now: 1, Next: 2, Future: 3 };
-    const weightDiff = (phaseWeights[a.phase] || 4) - (phaseWeights[b.phase] || 4);
+    const phaseWeights = { Past: 1, Now: 2, Next: 3, Future: 4 };
+    const weightDiff = (phaseWeights[a.phase] || 5) - (phaseWeights[b.phase] || 5);
     if (weightDiff !== 0) return weightDiff;
     return a.order_weight - b.order_weight;
   });
 
   const getPhaseStyles = (phase: string) => {
     switch (phase) {
+      case 'Past':
+        return {
+          bg: 'bg-zinc-50 dark:bg-zinc-950/20',
+          text: 'text-zinc-700 dark:text-zinc-400',
+          border: 'border-zinc-400 dark:border-zinc-500',
+          dot: 'bg-zinc-400 dark:bg-zinc-500',
+          labelBg: 'bg-zinc-400 dark:bg-zinc-500 text-white',
+        };
       case 'Now':
         return {
           bg: 'bg-emerald-50 dark:bg-emerald-950/20',

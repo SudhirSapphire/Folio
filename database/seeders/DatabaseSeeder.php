@@ -258,38 +258,87 @@ class DatabaseSeeder extends Seeder
         $roadmaps = [
             [
                 'phase' => 'Now',
-                'title' => 'Container Orchestration & CI/CD',
-                'description' => 'Deep diving into Kubernetes orchestration, Helm charts, and building secure self-hosted GitLab/GitHub Action CI/CD pipelines.',
-                'tags' => ['Kubernetes', 'Helm', 'CI/CD'],
+                'title' => 'PHP, MySQL & Frontend Essentials',
+                'description' => 'Leveraging deep foundations in vanilla PHP, relational database design with MySQL, and responsive frontend styling with HTML5, CSS3, ES6 JavaScript, and Bootstrap.',
+                'tags' => ['PHP', 'MySQL', 'Frontend'],
                 'order_weight' => 1
             ],
             [
                 'phase' => 'Now',
-                'title' => 'LaraSafe Feature Expansion',
-                'description' => 'Integrating automated database restoration, encrypted backups, and custom Slack/Discord webhook status alerts.',
-                'tags' => ['Laravel', 'Security'],
+                'title' => 'Quick Transport & TILD Systems',
+                'description' => 'Maintaining and leveraging architecture insights from earlier logistics platforms like Quick Transport (bidding/trucking logs) and interactive administrative control panels in TILD.',
+                'tags' => ['PHP', 'Logistics', 'TILD'],
                 'order_weight' => 2
             ],
             [
-                'phase' => 'Next',
-                'title' => 'System Utilities in Rust',
-                'description' => 'Exploring Rust development to build highly performant system-level backup utilities and file watchers.',
-                'tags' => ['Rust', 'Systems Programming'],
+                'phase' => 'Now',
+                'title' => 'Village on Web & SaaS Multi-DBs',
+                'description' => 'Scaling SaaS multi-tenant database provisioning patterns to isolate municipal records and automate database seeding on target servers.',
+                'tags' => ['SaaS', 'Multi-Tenant', 'MySQL'],
                 'order_weight' => 3
             ],
             [
-                'phase' => 'Next',
-                'title' => 'Modular SaaS Architecture',
-                'description' => 'Designing a lightweight, multi-tenant Laravel SaaS template featuring single-database tenancy and Stripe billing modules.',
-                'tags' => ['SaaS', 'Stripe'],
+                'phase' => 'Now',
+                'title' => 'Advanced Laravel Enterprise Stack',
+                'description' => 'Developing high-performance backend pipelines, building complex job queue systems, REST APIs with media upload chunking, and Inertia.js client-side views.',
+                'tags' => ['Laravel', 'REST API', 'Inertia.js'],
                 'order_weight' => 4
             ],
             [
-                'phase' => 'Future',
-                'title' => 'AWS Certified Solutions Architect',
-                'description' => 'Studying to obtain AWS solutions architect certification to build robust enterprise-grade cloud architectures.',
-                'tags' => ['AWS', 'Cloud Architecture'],
+                'phase' => 'Now',
+                'title' => 'LaraSafe Automated Backup Suite',
+                'description' => 'Actively scaling LaraSafe, an open-source automated project backup package supporting S3, Backblaze B2, and Wasabi target endpoints.',
+                'tags' => ['LaraSafe', 'Open Source', 'S3'],
                 'order_weight' => 5
+            ],
+            [
+                'phase' => 'Now',
+                'title' => 'Nimbus VPS Control Panel',
+                'description' => 'Developing and actively scaling Nimbus, a secure self-hosted VPS control panel orchestrating domains, Nginx, Let\'s Encrypt certificates, databases, and Supervisor cron jobs.',
+                'tags' => ['Nimbus', 'VPS Panel', 'DevOps'],
+                'order_weight' => 6
+            ],
+            [
+                'phase' => 'Now',
+                'title' => 'CloudSaviour Mirroring System',
+                'description' => 'Designing CloudSaviour, a resilient multi-cloud syncing tool engineered to automate, verify, and mirror disaster-recovery assets across distributed cloud providers.',
+                'tags' => ['CloudSaviour', 'Sync Engine', 'Cloud'],
+                'order_weight' => 7
+            ],
+            [
+                'phase' => 'Now',
+                'title' => 'AWS Cloud Infrastructure',
+                'description' => 'Deploying, managing, and scaling environments on AWS (EC2, S3, RDS, IAM) with optimized cost control, strict VPC rules, and CloudWatch monitor logs.',
+                'tags' => ['AWS', 'EC2', 'Cloud'],
+                'order_weight' => 8
+            ],
+            [
+                'phase' => 'Now',
+                'title' => 'Docker Containerization',
+                'description' => 'Orchestrating containerized local development templates, staging setups, and Nginx/PHP-FPM containers for rapid application scaling.',
+                'tags' => ['Docker', 'Nginx', 'Containers'],
+                'order_weight' => 9
+            ],
+            [
+                'phase' => 'Next',
+                'title' => 'Terraform Infrastructure as Code',
+                'description' => 'Gearing up to implement declarative cloud infrastructure provisioning using Terraform to manage and track AWS resources.',
+                'tags' => ['Terraform', 'IaC', 'DevOps'],
+                'order_weight' => 10
+            ],
+            [
+                'phase' => 'Next',
+                'title' => 'Kubernetes Orchestration',
+                'description' => 'Mastering container scheduling, microservice networks, ingress load balancing, and resilient auto-scaling pods inside K8s environments.',
+                'tags' => ['Kubernetes', 'K8s', 'Orchestration'],
+                'order_weight' => 11
+            ],
+            [
+                'phase' => 'Future',
+                'title' => 'High-Availability Multi-Cloud SRE',
+                'description' => 'Architecting zero-downtime, geo-distributed multi-cloud infrastructure networks utilizing automated health checks and master-slave database replication.',
+                'tags' => ['SRE', 'Multi-Cloud', 'Architecture'],
+                'order_weight' => 12
             ]
         ];
 

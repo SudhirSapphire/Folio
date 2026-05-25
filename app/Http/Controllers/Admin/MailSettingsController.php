@@ -69,6 +69,7 @@ class MailSettingsController extends Controller
         try {
             // 1. Dynamically override settings specifically for this runtime session
             config([
+                'mail.default' => 'smtp',
                 'mail.mailers.smtp.host' => $request->host,
                 'mail.mailers.smtp.port' => (int)$request->port,
                 'mail.mailers.smtp.username' => $request->username,
@@ -81,8 +82,8 @@ class MailSettingsController extends Controller
             // 2. Purge cached Mailer singleton instance so Laravel recreates transport using new configs! (Crucial!)
             app()->make('mail.manager')->forgetMailers();
 
-            // 3. Instigate real dispatch
-            Mail::to($request->destination_email)->send(new SmtpConnectionTestMail());
+            // 3. Instigate real dispatch explicitly targeting the smtp mailer
+            Mail::mailer('smtp')->to($request->destination_email)->send(new SmtpConnectionTestMail());
 
             return back()->with('message', 'Test Email sent successfully! Please check your inbox/spam.');
 
